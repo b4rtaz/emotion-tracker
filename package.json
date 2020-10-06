@@ -1,0 +1,32 @@
+{
+	"name": "emotion-tracker-ai",
+	"version": "0.1.0",
+	"main": "app/main.js",
+	"scripts": {
+		"start": "webpack --watch",
+		"build": "webpack",
+		"tslint": "tslint --project tsconfig.json",
+		"electron": "webpack && electron .",
+		"package:win": "webpack && electron-packager . EmotionTrackerAI --platform=win32 --ignore=\"build/win64|src\" --arch=x64 --overwrite --icon=app/icon.ico --out=build/win64"
+	},
+	"author": "Bartlomiej Tadych (http://n4no.com)",
+	"license": "MIT",
+	"devDependencies": {
+		"@tensorflow/tfjs-core": "^2.4.0",
+		"@types/chart.js": "^2.9.24",
+		"chart.js": "^2.9.3",
+		"chartjs-plugin-streaming": "^1.8.0",
+		"electron": "^10.1.3",
+		"electron-packager": "^15.1.0",
+		"face-api.js": "^0.22.2",
+		"moment": "^2.29.0",
+		"ts-loader": "^8.0.4",
+		"tslint": "^6.1.3",
+		"typescript": "^4.0.3",
+		"webpack": "^4.39.1",
+		"webpack-cli": "^3.3.6"
+	},
+	"dependencies": {
+		"node-notifier": "^8.0.0"
+	}
+}

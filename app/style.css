@@ -1,0 +1,79 @@
+html, body, p, h1, h2, h3, h4, h5, h6, button {padding: 0; margin: 0; border: 0; outline: 0;}
+
+body, select, input, button, h1, h3 {font: 13px/1.2em 'Open Sans', Arial, Tahoma, Verdana, Serif; font-weight: normal;}
+
+body {color: #FFF; background: #202020;}
+
+a {color: #04DED3; text-decoration: none; transition: color 0.2s;}
+a:hover {color: #FFF;}
+
+.app {display: flex; flex-direction: column; width: 100vw; height: 100vh; max-width: 1300px; margin: 0 auto;}
+.app header {padding: 10px 20px; margin-bottom: 5px; background: #252525;}
+.app header h1 img {vertical-align: middle; margin-right: 5px;}
+.app header h1 .name {vertical-align: middle; color: #04DED3; font-size: 18px; font-weight: bold; line-height: 1.2em;}
+.app header h1 .version {vertical-align: middle; color: #9A9A9A; margin: 0 3px;}
+.app header nav a {margin-left: 15px; font-size: 12px; line-height: 1em;}
+@media screen and (min-width: 500px) {
+	.app header {display: flex; align-items: center;}
+	.app header nav {flex: 1; text-align: right;}
+}
+@media screen and (max-width: 499.99px) {
+	.app header {text-align: center;}
+	.app header nav {padding: 10px 0;}
+}
+
+.app .cols {display: flex; flex: 1;}
+.app .cols .col {display: flex; flex: 1;}
+.app .cols .col.first {flex: 4;}
+.app .cols .col.second {flex: 2;}
+@media screen and (min-width: 500px) {
+	.app .cols {flex-direction: row;}
+	.app .cols .col {flex-direction: column;}
+}
+@media screen and (max-width: 499.99px) {
+	.app .cols {flex-direction: column;}
+	.app .cols .col {flex-direction: column;}
+}
+
+.app section {background: #252525; margin: 5px;}
+.app section h3 {padding: 12px 15px; font-weight: normal;}
+.app section h3 span.suffix {margin: 0 5px; color: #9A9A9A;}
+
+.app section.embed .placeholder {position: relative; overflow: hidden;}
+@media screen and (min-width: 500px) {
+	.app section.embed {display: flex; flex-direction: column;}
+	.app section.embed .placeholder {flex: 1;}
+}
+@media screen and (max-width: 499.99px) {
+	.app section.embed .placeholder {height: 25vh;}
+}
+
+.app .row.preview {flex: 3;}
+.app .cols.charts {flex: 2;}
+.app .row.chart {flex: 1;}
+
+#preview-video,
+#preview-overlay,
+#history-chart,
+#distribution-chart {position: absolute; z-index: 1; left: 0; top: 0;}
+
+.app section .control {text-align: center; padding: 0 0 10px;}
+.app section .control button {display: inline-block; padding: 12px 45px; font-weight: bold; border-radius: 15px 15px; color: #FFF; background: rgb(14,204,209); background: linear-gradient(90deg, rgba(14,204,209,1) 0%, rgba(34,144,180,1) 100%); transition: opacity 0.2s; cursor: pointer;}
+.app section .control button:hover {opacity: 0.8;}
+.app section .control button:disabled {background: #717171; cursor: not-allowed;}
+
+.app section .emotion {text-align: center; padding: 0 0 10px; font-weight: bold; color: #04DED3; font-size: 24px; line-height: 1em;}
+
+.app section .inputs {padding: 0 0 10px;}
+.app section .inputs .input {display: flex; align-items: center; padding: 5px 10px;}
+.app section .inputs .input label {flex: 3; text-align: right; padding-right: 10px; color: #9A9A9A;}
+.app section .inputs .input .value {flex: 4;}
+.app section .inputs .input .value select,
+.app section .inputs .input .value input[type=text] {width: 100%; box-sizing: border-box; color: #FFF; background: #252525; border: 0; padding: 5px 10px;}
+
+.app section .text {padding: 0 15px 15px; line-height: 1.5em;}
+
+.warning {display: none; padding: 5px 15px; color: #000; background: #F7F23B; text-align: center;}
+.warning p {padding: 5px 0;}
+.warning a {display: inline-block; padding: 5px 10px; color: #000; background: #FFFFD6; cursor: pointer; border-radius: 15px 15px; transition: background 0.2s;}
+.warning a:hover {background: #FFF;}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta charset="UTF-8" />
+	<title>Emotion Tracker AI - Track Emotions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="icon.ico" />
+	<link href="style.css" rel="stylesheet" />
+	<script src="./bundle.js"></script>
+
+	<meta property="og:title" content="Emotion Tracker AI - Track Emotions" />
+	<meta property="og:description" content="Track your mood during the job. Get notifications when you are sad or unsatisfied. Emotions Tracker is powered by artificial intelligence." />
+	<meta property="og:image" content="app-preview.jpg" />
+</head>
+<body>
+
+<div class="app">
+	<header>
+		<h1>
+			<img src="icon.png" width="40" height="40" />
+			<span class="name">Emotion Tracker AI</span>
+			<span class="version">0.1.0</span>
+		</h1>
+
+		<nav>
+			<a href="https://twitter.com/b4rtaz" target="_blank">@b4rtaz</a>
+			<a href="http://n4no.com/" target="_blank">Website</a>
+		</nav>
+	</header>
+
+	<div class="cols">
+		<div class="col first">
+			<section class="row embed preview">
+				<h3>Camera</h3>
+				<div class="placeholder">
+					<div class="warning" id="preview-error">
+						<p>Cannot get access to the camera. Check permissions and restart this app.</p>
+					</div>
+					<video id="preview-video" autoplay></video>
+					<canvas id="preview-overlay"></canvas>
+				</div>
+			</section>
+
+			<div class="cols charts">
+				<div class="col">
+					<section class="row embed chart">
+						<h3>History</h3>
+						<div class="placeholder">
+							<canvas id="history-chart"></canvas>
+						</div>
+					</section>
+				</div>
+				<div class="col">
+					<section class="row embed chart">
+						<h3>
+							Distribution
+							<span class="suffix" id="distribution-time"></span>
+						</h3>
+						<div class="placeholder">
+							<canvas id="distribution-chart"></canvas>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<div class="col second">
+			<section>
+				<h3>Tracker</h3>
+				<div class="control">
+					<button id="start-button">Loading...</button>
+				</div>
+			</section>
+
+			<section>
+				<h3>Current Emotion</h3>
+				<div class="emotion" id="current-emotion">
+					&mdash;
+				</div>
+			</section>
+
+			<section>
+				<h3>Performance</h3>
+				<div class="inputs">
+					<div class="input">
+						<label>Detection delay</label>
+						<div class="value">
+							<select id="detection-delay">
+								<option value="0">None</option>
+								<option value="100">100ms</option>
+								<option value="200" selected>200ms</option>
+								<option value="500">500ms</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>Notification</h3>
+				<div class="inputs">
+					<div class="warning" id="notification-warning">
+						<p>Desktop version supports notifications only.</p>
+						<p><a href="http://n4no.com/">Get desktop version</a></p>
+					</div>
+
+					<div class="input">
+						<label>When</label>
+						<div class="value">
+							<select id="notification-level">
+								<option value="neutral">below neutral</option>
+								<option value="happy">below happy</option>
+								<option value="disgusted">disabled</option>
+							</select>
+						</div>
+					</div>
+					<div class="input">
+						<label>Duration</label>
+						<div class="value">
+							<select id="notification-duration">
+								<option value="5000">5 seconds</option>
+								<option value="7000" selected>7 seconds</option>
+								<option value="14000">14 seconds</option>
+								<option value="20000">20 seconds</option>
+								<option value="30000">30 seconds</option>
+							</select>
+						</div>
+					</div>
+					<div class="input">
+						<label>Activation</label>
+						<div class="value">
+							<select id="notification-activation">
+								<option value="0.1">10%+</option>
+								<option value="0.3">30%+</option>
+								<option value="0.5">50%+</option>
+								<option value="0.7" selected>70%+</option>
+								<option value="0.9">90%+</option>
+							</select>
+						</div>
+					</div>
+					<div class="input">
+						<label>Message</label>
+						<div class="value">
+							<input type="text" id="notification-message" value="Please don't be so sad!" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h3>Tips</h3>
+				<div class="text">
+					This is the first version of the tracker, so this isn't perfect for now. This version works better when the person hasn't glasses.
+				</div>
+			</section>
+		</div>	
+	</div>
+</div>
+
+</body>
+</html>

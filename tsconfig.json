@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"outDir": "./app/build/",
+		"noImplicitAny": true,
+		"target": "es5",
+		"sourceMap": true,
+		"allowJs": false,
+		"lib": [ "es2015", "dom" ]
+	}
+}
