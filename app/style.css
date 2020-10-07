@@ -7,13 +7,14 @@ body {color: #FFF; background: #202020;}
 a {color: #04DED3; text-decoration: none; transition: color 0.2s;}
 a:hover {color: #FFF;}
 
-.app {display: flex; flex-direction: column; width: 100vw; height: 100vh; max-width: 1300px; margin: 0 auto;}
+.app {width: 100vw; height: 100vh; max-width: 1300px; margin: 0 auto;}
 .app header {padding: 10px 20px; margin-bottom: 5px; background: #252525;}
 .app header h1 img {vertical-align: middle; margin-right: 5px;}
 .app header h1 .name {vertical-align: middle; color: #04DED3; font-size: 18px; font-weight: bold; line-height: 1.2em;}
 .app header h1 .version {vertical-align: middle; color: #9A9A9A; margin: 0 3px;}
 .app header nav a {margin-left: 15px; font-size: 12px; line-height: 1em;}
 @media screen and (min-width: 500px) {
+	.app {display: flex; flex-direction: column;}
 	.app header {display: flex; align-items: center;}
 	.app header nav {flex: 1; text-align: right;}
 }
@@ -22,17 +23,12 @@ a:hover {color: #FFF;}
 	.app header nav {padding: 10px 0;}
 }
 
-.app .cols {display: flex; flex: 1;}
-.app .cols .col {display: flex; flex: 1;}
-.app .cols .col.first {flex: 4;}
-.app .cols .col.second {flex: 2;}
+
 @media screen and (min-width: 500px) {
-	.app .cols {flex-direction: row;}
-	.app .cols .col {flex-direction: column;}
-}
-@media screen and (max-width: 499.99px) {
-	.app .cols {flex-direction: column;}
-	.app .cols .col {flex-direction: column;}
+	.app .cols {display: flex; flex-direction: row; flex: 1;}
+	.app .cols .col {display: flex; flex-direction: column; flex: 1;}
+	.app .cols .col.first {flex: 4;}
+	.app .cols .col.second {flex: 2;}
 }
 
 .app section {background: #252525; margin: 5px;}

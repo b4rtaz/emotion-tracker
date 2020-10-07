@@ -6,16 +6,26 @@
 
 Track your mood during the job. Get notifications when you are sad or unsatisfied. Emotions Tracker is powered by artificial intelligence ([face-api.js](https://github.com/justadudewhohacks/face-api.js/)).
 
+<p align="center">![Emotion Tracker](preview.gif)</p>
+
 ## ⚙️ How to Run
 
-[Node.js](https://nodejs.org/en/) is required.
+#### Windows
 
-#### Build & Run Desktop Version
+Download [binaries](https://github.com/b4rtaz/emotion-tracker/releases).
+
+#### Linux, MacOS
+
+[Node.js](https://nodejs.org/en/) is required.
 
 ```
 npm install
 npm run electron
 ```
+
+#### Online Demo
+
+There is also available [online demo](https://emotion-tracker.n4no.com/demo/), but it doesn't support notifications.
 
 ## 🤝 Contributing
 

@@ -26,10 +26,15 @@ export class Preview {
 		this.overlayContext = this.overlay.getContext('2d');
 		this.error = <HTMLElement>document.getElementById('preview-error');
 
-		navigator.mediaDevices.getUserMedia({ video: true }).then(
-			s => this.onSuccess(s),
-			e => this.onError(e)
-		);
+		try {
+			navigator.mediaDevices.getUserMedia({ video: true }).then(
+				s => this.onSuccess(s),
+				e => this.onError(e)
+			);
+		} catch (e) {
+			console.error(e);
+			this.showError('Your browser doesn\'t support camera preview.');
+		}
 
 		window.addEventListener('resize', () => this.onResize());
 
@@ -77,8 +82,13 @@ export class Preview {
 
 	private onError(error: any) {
 		console.error(error);
+		this.showError('Cannot get access to the camera. Check permissions and restart this app.');
+	}
+
+	private showError(message: string) {
 		this.video.style.display = 'none';
 		this.error.style.display = 'block';
+		this.error.innerText = message;
 	}
 
 	private onPreviewLoaded() {
