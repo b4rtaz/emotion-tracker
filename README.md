@@ -6,7 +6,7 @@
 
 Track your mood during the job. Get notifications when you are sad or unsatisfied. Emotions Tracker is powered by artificial intelligence ([face-api.js](https://github.com/justadudewhohacks/face-api.js/)).
 
-<p align="center">![Emotion Tracker](preview.gif)</p>
+<p align="center"><img src="preview.gif" alt="Emotion Tracker Preview" /></p>
 
 ## ⚙️ How to Run
 
