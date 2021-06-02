@@ -23,10 +23,6 @@ npm install
 npm run electron
 ```
 
-#### Online Demo
-
-There is also available [online demo](https://emotion-tracker.n4no.com/demo/), but it doesn't support notifications.
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
